@@ -33,7 +33,7 @@
     </select>
 
     <select id="login" resultType="com.example.system_management.model.UserDomain">
-        SELECT * form t_user
+        SELECT * from t_user  where userName=#{userName} and password=#{password}
     </select>
 
 

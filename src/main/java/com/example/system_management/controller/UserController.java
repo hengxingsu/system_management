@@ -8,6 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 @Controller
 @RequestMapping(value = "/user")
 public class UserController {
@@ -49,9 +52,10 @@ public class UserController {
 
         @ResponseBody
         @RequestMapping("/to_user_list")
-        public ModelAndView toIndex(){
+        public ModelAndView toUserList(){
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.setViewName("user/user_list");
+                modelAndView.setViewName("/user/user_list");
                 return modelAndView;
         }
+
 }
